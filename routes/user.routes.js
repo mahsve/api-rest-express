@@ -1,25 +1,16 @@
 import { Router } from 'express'
+import { userDELETE, userGET, userPATCH, userPOST, userPUT } from '../controllers/user.controller.js'
 
 const routerUser = new Router()
 
-routerUser.get('/', (req, res) => {
-  res.json({ message: 'Respuesta API GET!' })
-})
+routerUser.get('/', userGET)
 
-routerUser.post('/', (req, res) => {
-  res.json({ message: 'Respuesta API POST!' })
-})
+routerUser.post('/', userPOST)
 
-routerUser.put('/', (req, res) => {
-  res.json({ message: 'Respuesta API PUT!' })
-})
+routerUser.put('/', userPUT)
 
-routerUser.patch('/', (req, res) => {
-  res.json({ message: 'Respuesta API PATCH!' })
-})
+routerUser.patch('/', userPATCH)
 
-routerUser.delete('/', (req, res) => {
-  res.json({ message: 'Respuesta API DELETE!' })
-})
+routerUser.delete('/', userDELETE)
 
 export default routerUser;
