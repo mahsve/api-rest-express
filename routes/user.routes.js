@@ -7,10 +7,10 @@ routerUser.get('/', userGET)
 
 routerUser.post('/', userPOST)
 
-routerUser.put('/', userPUT)
+routerUser.put('/:id', userPUT)
 
 routerUser.patch('/', userPATCH)
 
-routerUser.delete('/', userDELETE)
+routerUser.delete('/:id', userDELETE)
 
 export default routerUser;
